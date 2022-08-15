@@ -1,6 +1,6 @@
 # petfeeder
 
-A new Flutter project.
+Pet Feeder IOT Using ESP32 
 
 ## Getting Started
 
