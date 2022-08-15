@@ -74,7 +74,7 @@ class _State extends State<Register> {
                 Container(
                     height: 50,
                     padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
-                    child: RaisedButton(
+                    child: MaterialButton(
                       textColor: Colors.white,
                       color: Colors.blue,
                       child: Text('Buat'),

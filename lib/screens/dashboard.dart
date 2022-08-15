@@ -49,27 +49,19 @@ class _NavBarState extends State<NavBar> {
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.menu_book),
-            title: Text('Grafik',
-                style: TextStyle(
-                    fontFamily: 'Poppins', fontWeight: FontWeight.w400)),
+            label: 'Grafik',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.assignment),
-            title: Text('Data Jam',
-                style: TextStyle(
-                    fontFamily: 'Poppins', fontWeight: FontWeight.w400)),
+            label: 'Data Jam',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.notifications),
-            title: Text('Data ESP32',
-                style: TextStyle(
-                    fontFamily: 'Poppins', fontWeight: FontWeight.w400)),
+            label: 'Data ESP32',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
-            title: Text('Profil',
-                style: TextStyle(
-                    fontFamily: 'Poppins', fontWeight: FontWeight.w400)),
+            label: 'Profil',
           ),
         ],
       ),

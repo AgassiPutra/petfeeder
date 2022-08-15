@@ -63,7 +63,7 @@ class _State extends State<Login> {
                   Container(
                       height: 50,
                       padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
-                      child: RaisedButton(
+                      child: MaterialButton(
                         textColor: Colors.white,
                         color: Colors.black,
                         child: Text('Login'),
@@ -78,7 +78,7 @@ class _State extends State<Login> {
                       child: Row(
                     children: <Widget>[
                       Text('Belum punya akun?'),
-                      FlatButton(
+                      MaterialButton(
                         textColor: Colors.black,
                         child: Text(
                           'Daftar Disini',
