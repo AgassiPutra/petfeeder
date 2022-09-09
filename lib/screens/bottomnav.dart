@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:petfeeder/screens/dashboard.dart';
 import 'package:petfeeder/screens/profil.dart';
 import 'package:petfeeder/util/const.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -27,7 +28,7 @@ class _NavBarState extends State<NavBar> {
   late SharedPreferences sharedPreferences;
   int _selectedNavbar = 0;
   final List<Widget> _children = [
-    ProfileScreen(),
+    Dashboard(),
     ProfileScreen(),
     ProfileScreen(),
     ProfileScreen(),
@@ -52,19 +53,19 @@ class _NavBarState extends State<NavBar> {
         currentIndex: _selectedNavbar,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.menu_book),
+            icon: Icon(Icons.graphic_eq_sharp),
             label: 'Grafik',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.assignment),
+            icon: Icon(Icons.lock_clock),
             label: 'Data Jam',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.notifications),
+            icon: Icon(Icons.memory),
             label: 'Data ESP32',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
+            icon: Icon(Icons.emoji_people),
             label: 'Profil',
           ),
         ],

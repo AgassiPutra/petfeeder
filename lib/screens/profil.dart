@@ -79,17 +79,17 @@ class MapScreenState extends State<ProfileScreen>
                               crossAxisAlignment: CrossAxisAlignment.center,
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
-                                Container(
-                                    width: 100.0,
-                                    height: 100.0,
-                                    decoration: const BoxDecoration(
-                                      shape: BoxShape.circle,
-                                      image: DecorationImage(
-                                        image:
-                                            ExactAssetImage('assets/wajah.png'),
-                                        fit: BoxFit.cover,
-                                      ),
-                                    )),
+                                // Container(
+                                //     width: 100.0,
+                                //     height: 100.0,
+                                //     decoration: const BoxDecoration(
+                                //       shape: BoxShape.circle,
+                                //       image: DecorationImage(
+                                //         image:
+                                //             ExactAssetImage('assets/tunas.png'),
+                                //         fit: BoxFit.cover,
+                                //       ),
+                                //     )),
                               ],
                             ),
                           ]),
