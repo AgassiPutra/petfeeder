@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:petfeeder/network/conn.dart';
-import 'package:petfeeder/screens/dashboard.dart';
+import 'package:petfeeder/screens/bottomnav.dart';
 import 'package:petfeeder/screens/register.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -45,7 +45,7 @@ class _State extends State<Login> {
                       decoration: const InputDecoration(
                         fillColor: Colors.black,
                         border: OutlineInputBorder(),
-                        labelText: 'User Name',
+                        labelText: 'Email',
                       ),
                     ),
                   ),
@@ -68,10 +68,15 @@ class _State extends State<Login> {
                         color: Colors.black,
                         child: Text('Login'),
                         onPressed: () {
-                          if (_formKey.currentState!.validate()) {
-                            _login(
-                                emailController.text, passwordController.text);
-                          }
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => BottomNav()),
+                          );
+                          // if (_formKey.currentState!.validate()) {
+                          //   _login(
+                          //       emailController.text, passwordController.text);
+                          // }
                         },
                       )),
                   Container(
@@ -112,7 +117,7 @@ class _State extends State<Login> {
 
       if (jsonResponse != null) {
         Navigator.of(context).pushAndRemoveUntil(
-            MaterialPageRoute(builder: (BuildContext context) => Dashboard()),
+            MaterialPageRoute(builder: (BuildContext context) => BottomNav()),
             (Route<dynamic> route) => false);
       }
     }

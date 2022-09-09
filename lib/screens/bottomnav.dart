@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:petfeeder/screens/profil.dart';
 import 'package:petfeeder/util/const.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class Dashboard extends StatelessWidget {
-  const Dashboard({Key? key}) : super(key: key);
+class BottomNav extends StatelessWidget {
+  const BottomNav({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,10 +27,10 @@ class _NavBarState extends State<NavBar> {
   late SharedPreferences sharedPreferences;
   int _selectedNavbar = 0;
   final List<Widget> _children = [
-    // Home(),
-    // ListWarung(),
-    // Notifikasi(),
-    // ProfileScreen(),
+    ProfileScreen(),
+    ProfileScreen(),
+    ProfileScreen(),
+    ProfileScreen(),
   ];
 
   void changeSelectedNavBar(int index) {
@@ -44,6 +45,9 @@ class _NavBarState extends State<NavBar> {
       body: _children[_selectedNavbar],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
+        backgroundColor: Colors.white,
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.grey,
         onTap: changeSelectedNavBar,
         currentIndex: _selectedNavbar,
         items: [

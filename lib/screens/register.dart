@@ -6,31 +6,19 @@ class Register extends StatefulWidget {
 }
 
 class _State extends State<Register> {
-  TextEditingController nameController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
   TextEditingController usernameController = TextEditingController();
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Image.asset(
-                'assets/tunas.png',
-                fit: BoxFit.contain,
-                height: 32,
-              ),
-            ],
-          ),
-        ),
         body: Padding(
             padding: EdgeInsets.only(top: 150.0),
             child: ListView(
               children: <Widget>[
                 Container(
-                    alignment: Alignment.centerLeft,
+                    alignment: Alignment.topCenter,
                     padding: EdgeInsets.all(10),
                     child: Text(
                       'Buat Akun',
@@ -42,10 +30,10 @@ class _State extends State<Register> {
                 Container(
                   padding: EdgeInsets.all(10),
                   child: TextField(
-                    controller: nameController,
+                    controller: usernameController,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: 'Name',
+                      labelText: 'Username',
                     ),
                   ),
                 ),
@@ -53,10 +41,10 @@ class _State extends State<Register> {
                   padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
                   child: TextField(
                     obscureText: true,
-                    controller: usernameController,
+                    controller: emailController,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: 'Username',
+                      labelText: 'Email',
                     ),
                   ),
                 ),
@@ -76,10 +64,10 @@ class _State extends State<Register> {
                     padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
                     child: MaterialButton(
                       textColor: Colors.white,
-                      color: Colors.blue,
+                      color: Colors.black,
                       child: Text('Buat'),
                       onPressed: () {
-                        print(nameController.text);
+                        print(emailController.text);
                         print(passwordController.text);
                       },
                     )),
