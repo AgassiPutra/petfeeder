@@ -13,19 +13,8 @@ class Dashboard extends StatefulWidget {
   MapScreenState createState() => MapScreenState();
 }
 
-const data = [
-  {'category': 'Shirts', 'sales': 5},
-  {'category': 'Cardigans', 'sales': 20},
-  {'category': 'Chiffons', 'sales': 36},
-  {'category': 'Pants', 'sales': 10},
-  {'category': 'Heels', 'sales': 10},
-  {'category': 'Socks', 'sales': 20},
-];
-
 class MapScreenState extends State<Dashboard>
     with SingleTickerProviderStateMixin {
-  var userData;
-
   @override
   void initState() {
     super.initState();
@@ -34,28 +23,76 @@ class MapScreenState extends State<Dashboard>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          backgroundColor: Colors.black,
-          automaticallyImplyLeading: false,
+        body: Column(
+      children: <Widget>[
+        Container(
+          padding: const EdgeInsets.only(left: 15, top: 60),
+          child: Row(
+            children: <Widget>[
+              Column(
+                children: [
+                  Text(
+                    "Selamat Datang,",
+                    style: TextStyle(
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.normal,
+                        fontSize: 14),
+                  ),
+                  Text(
+                    "Agassi",
+                    style: TextStyle(
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.w700,
+                        fontSize: 20),
+                  ),
+                ],
+              ),
+              const Spacer(),
+              IconButton(
+                icon: const Icon(Icons.notifications),
+                onPressed: () {},
+              ),
+            ],
+          ),
         ),
-        body: Container(
-            height: 200,
-            child: Chart(
-              data: data,
-              variables: {
-                'category': Variable(
-                  accessor: (Map map) => map['category'] as String,
+        Container(
+          height: 100,
+          color: Colors.green,
+          padding: const EdgeInsets.only(left: 15, top: 15),
+          child: Row(
+            children: <Widget>[
+              Icon(Icons.sunny),
+              Flexible(
+                child: Column(
+                  children: [
+                    Text(
+                      "28°C",
+                      style: TextStyle(
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.normal,
+                          fontSize: 14),
+                    ),
+                    Text(
+                      "Suhu ruangan terlampau tinggi , mungkin bisa menurunkan suhu agar kucing tidak mudah kepanasan",
+                      style: TextStyle(
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.normal,
+                          fontSize: 12),
+                    ),
+                  ],
                 ),
-                'sales': Variable(
-                  accessor: (Map map) => map['sales'] as num,
+              )
+            ],
+          ),
+        ),
+        Container(
+            decoration: BoxDecoration(
+                border: Border.all(
+                  color: Colors.black,
                 ),
-              },
-              elements: [LineElement()],
-              axes: [
-                Defaults.horizontalAxis,
-                Defaults.verticalAxis,
-              ],
-            )));
+                borderRadius: BorderRadius.all(Radius.circular(20))),
+            child: Text("Halo"))
+      ],
+    ));
   }
 }

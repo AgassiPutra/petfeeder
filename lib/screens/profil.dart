@@ -15,6 +15,7 @@ class ProfileScreen extends StatefulWidget {
 class MapScreenState extends State<ProfileScreen>
     with SingleTickerProviderStateMixin {
   var userData;
+  var userEmail;
 
   @override
   void initState() {
@@ -117,11 +118,11 @@ class MapScreenState extends State<ProfileScreen>
                                     mainAxisSize: MainAxisSize.min,
                                     children: const <Widget>[
                                       Text(
-                                        'Informasi Pribadi',
+                                        'Informasi Akun',
                                         style: TextStyle(
                                             fontFamily: 'Poppins',
                                             fontWeight: FontWeight.w700,
-                                            fontSize: 20),
+                                            fontSize: 30),
                                       ),
                                     ],
                                   ),
@@ -157,7 +158,45 @@ class MapScreenState extends State<ProfileScreen>
                                   Flexible(
                                     child: Text(
                                       '${userData}',
-                                      style: TextStyle(
+                                      style: const TextStyle(
+                                          fontFamily: 'Poppins',
+                                          fontWeight: FontWeight.w400,
+                                          fontSize: 16),
+                                    ),
+                                  ),
+                                ],
+                              )),
+                          Padding(
+                              padding: const EdgeInsets.only(
+                                  left: 25.0, right: 25.0, top: 25.0),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                children: <Widget>[
+                                  Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: const <Widget>[
+                                      Text(
+                                        'Email',
+                                        style: TextStyle(
+                                            fontFamily: 'Poppins',
+                                            fontWeight: FontWeight.w700,
+                                            fontSize: 16),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              )),
+                          Padding(
+                              padding: const EdgeInsets.only(
+                                  left: 25.0, right: 25.0, top: 2.0),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                children: <Widget>[
+                                  Flexible(
+                                    child: Text(
+                                      '${userEmail}',
+                                      style: const TextStyle(
                                           fontFamily: 'Poppins',
                                           fontWeight: FontWeight.w400,
                                           fontSize: 16),
