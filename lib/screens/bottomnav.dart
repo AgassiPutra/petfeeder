@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:petfeeder/screens/dashboard.dart';
+import 'package:petfeeder/screens/dataesp32.dart';
+import 'package:petfeeder/screens/datajam.dart';
 import 'package:petfeeder/screens/profil.dart';
 import 'package:petfeeder/util/const.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -29,8 +31,8 @@ class _NavBarState extends State<NavBar> {
   int _selectedNavbar = 0;
   final List<Widget> _children = [
     Dashboard(),
-    ProfileScreen(),
-    ProfileScreen(),
+    DataJam(),
+    DataEsp(),
     ProfileScreen(),
   ];
 

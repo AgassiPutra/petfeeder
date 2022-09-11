@@ -85,13 +85,6 @@ class MapScreenState extends State<Dashboard>
             ],
           ),
         ),
-        Container(
-            decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.black,
-                ),
-                borderRadius: BorderRadius.all(Radius.circular(20))),
-            child: Text("Halo"))
       ],
     ));
   }
