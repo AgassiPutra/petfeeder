@@ -18,7 +18,7 @@ class _CreateState extends State<TambahESP32> {
 
   Future _createKategori() async {
     return await http.post(
-      Uri.parse("${Env.URL_PREFIX}/create_jam.php"),
+      Uri.parse("${Env.URL_PREFIX}/create_esp32.php"),
       body: {
         "nama_device": namaController.text,
       },

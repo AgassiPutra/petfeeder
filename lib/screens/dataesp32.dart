@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:http/http.dart' as http;
 import 'package:petfeeder/env.dart';
+import 'package:petfeeder/screens/updateesp32.dart';
 
 class DataEsp extends StatefulWidget {
   const DataEsp({Key? key}) : super(key: key);
@@ -114,12 +115,12 @@ class _ESP32State extends State<DataEsp> {
                           children: [
                             IconButton(
                               onPressed: () => {
-                                // Navigator.push(
-                                //   context,
-                                //   MaterialPageRoute(
-                                //       builder: (context) =>
-                                //           UpdateKategori(kategori: data)),
-                                // ),
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          UpdateESP32(esp32: data)),
+                                ),
                               },
                               icon: const Icon(Icons.edit),
                               iconSize: 30,

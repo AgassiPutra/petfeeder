@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:http/http.dart' as http;
 import 'package:petfeeder/env.dart';
+import 'package:petfeeder/screens/updatejam.dart';
 
 class DataJam extends StatefulWidget {
   const DataJam({Key? key}) : super(key: key);
@@ -113,12 +114,12 @@ class _JamState extends State<DataJam> {
                           children: [
                             IconButton(
                               onPressed: () => {
-                                // Navigator.push(
-                                //   context,
-                                //   MaterialPageRoute(
-                                //       builder: (context) =>
-                                //           UpdateKategori(kategori: data)),
-                                // ),
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          UpdateJam(jam: data)),
+                                ),
                               },
                               icon: const Icon(Icons.edit),
                               iconSize: 30,
